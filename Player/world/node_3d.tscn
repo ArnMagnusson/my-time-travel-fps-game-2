@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw0kax3kmqksi"]
+[gd_scene load_steps=3 format=3 uid="uid://bw0kax3kmqksi"]
 
 [ext_resource type="PackedScene" uid="uid://dwjmcgavv2bso" path="res://Player/character_body_3d.tscn" id="1_u2wv5"]
+
+[sub_resource type="Environment" id="Environment_u2wv5"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -15,3 +17,9 @@ size = Vector3(0.3413086, 3.9458618, 7.690674)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_u2wv5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_u2wv5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.031236291, 0.999512, 0, -0.999512, 0.031236291, 0, 40.104797, -5.220198)
